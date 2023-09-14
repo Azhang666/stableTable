@@ -1,0 +1,964 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap");
+* {
+  font-family: "Noto Sans HK", sans-serif;
+  box-sizing: border-box;
+}
+
+body header nav div.w-100 {
+  background-color: rgb(0, 0, 0);
+}
+body header nav div.w-100 div ul.my-p-m-0 {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+body header nav div.w-100 div ul.my-p-m-0 li {
+  width: 15%;
+}
+body header nav div.w-100 div ul.my-p-m-0 li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+}
+body header nav div.w-100 div ul.my-p-m-0 li a i {
+  padding-right: 5px;
+}
+body header nav div.w-100 div ul.my-p-m-0 li a h1 {
+  font-size: 1rem;
+  line-height: 0.5;
+  margin-bottom: 0;
+}
+body header nav div.w-100 div ul.my-p-m-0 li a:hover {
+  color: rgb(255, 255, 255);
+}
+body header nav div.w-100 div ul.my-p-m-0 li a.dp {
+  display: block;
+}
+body header nav div.w-100 div ul.my-p-m-0 li a.ndp {
+  display: none;
+}
+body header div#sideNav {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100vh;
+  width: 90%;
+  background-color: rgb(0, 0, 0);
+}
+body header div#sideNav nav ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+body header div#sideNav nav ul li {
+  width: 100%;
+}
+body header div#sideNav nav ul li a.sideNevA {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+body header div#sideNav nav ul li a.sideNevA:hover {
+  background-color: rgba(125, 125, 125, 0.468);
+  border-radius: 10px;
+  cursor: pointer;
+}
+body header div#sideNav nav ul li a.sideNevA i {
+  padding-right: 10px;
+}
+body header div#sideNav nav ul li a.dp {
+  display: block;
+}
+body header div#sideNav nav ul li a.ndp {
+  display: none;
+}
+body section.login div.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+body section.login div.modal form.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+body section.login div.modal form.modal-content div.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+body section.login div.modal form.modal-content div.imgcontainer span.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+body section.login div.modal form.modal-content div.imgcontainer span.close:hover, body section.login div.modal form.modal-content div.imgcontainer span.close:focus {
+  color: red;
+  cursor: pointer;
+}
+body section.login div.modal form.modal-content div.container label {
+  font-weight: 100;
+}
+body section.login div.modal form.modal-content div.container p#show-caps-lock-info {
+  display: none;
+  color: red;
+  margin-bottom: 8px;
+}
+body section.login div.modal form.modal-content div.container input[type=text],
+body section.login div.modal form.modal-content div.container input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+body section.login div.modal form.modal-content div.container input[type=text]:focus,
+body section.login div.modal form.modal-content div.container input[type=password]:focus {
+  outline: none;
+}
+body section.login div.modal form.modal-content div.container button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 30px;
+}
+body section.login div.modal form.modal-content div.container button:hover {
+  opacity: 0.8;
+}
+body section.login div.modal form.modal-content div.container button.cancelbtn {
+  width: auto;
+  margin-left: 12px;
+  padding: 10px 18px;
+  background-color: #f44336;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+body section.login div.modal form.modal-content div.container label.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+body section.login div.modal form.modal-content div.container label.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body section.login div.modal form.modal-content div.container label.switch span.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+body section.login div.modal form.modal-content div.container label.switch span.slider::before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.2s;
+}
+body section.login div.modal form.modal-content div.container label.switch input:checked + span.slider {
+  background-color: #2196f3;
+}
+body section.login div.modal form.modal-content div.container label.switch input:focus + span.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+body section.login div.modal form.modal-content div.container label.switch input:checked + span.slider:before {
+  transform: translateX(26px);
+  transform: translateX(26px);
+  transform: translateX(26px);
+}
+body section.login div.modal form.modal-content div.container a.m {
+  text-decoration: none;
+  margin-left: 2rem;
+}
+body section.login div.modal form.modal-content div.container a.m:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+body section.signUpGroup div.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+body section.signUpGroup div.modal span.close {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+body section.signUpGroup div.modal span.close:hover, body section.signUpGroup div.modal span.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+body section.signUpGroup div.modal form.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+body section.signUpGroup div.modal form.modal-content div.container h2 {
+  font-size: 2rem;
+}
+body section.signUpGroup div.modal form.modal-content div.container label {
+  font-weight: 100;
+}
+body section.signUpGroup div.modal form.modal-content div.container p.show-caps-lock-inpassword {
+  display: none;
+  color: red;
+  margin-bottom: 8px;
+}
+body section.signUpGroup div.modal form.modal-content div.container p.show-caps-lock-inrepassword {
+  display: none;
+  color: red;
+  margin-bottom: 8px;
+}
+body section.signUpGroup div.modal form.modal-content div.container hr {
+  border: 1px solid rgba(125, 125, 125, 0.468);
+  margin-bottom: 1.5rem;
+}
+body section.signUpGroup div.modal form.modal-content div.container input[type=text],
+body section.signUpGroup div.modal form.modal-content div.container input[type=password] {
+  width: 100%;
+  padding: 1rem;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+}
+body section.signUpGroup div.modal form.modal-content div.container input[type=text]:focus,
+body section.signUpGroup div.modal form.modal-content div.container input[type=password]:focus {
+  background-color: rgba(125, 125, 125, 0.468);
+  outline: none;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch span.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch span.slider::before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.2s;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch input:checked + span.slider {
+  background-color: #2196f3;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch input:focus + span.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+body section.signUpGroup div.modal form.modal-content div.container label.switch input:checked + span.slider:before {
+  transform: translateX(26px);
+  transform: translateX(26px);
+  transform: translateX(26px);
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message {
+  display: none;
+  border-radius: 30px;
+  background: rgba(125, 125, 125, 0.468);
+  color: rgb(0, 0, 0);
+  position: relative;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message p {
+  padding: 0.5rem 2rem;
+  margin: 0;
+  font-size: 1.25rem;
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message p.valid {
+  color: green;
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message p.valid::before {
+  position: relative;
+  left: -30px;
+  content: "✔";
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message p.invalid {
+  color: red;
+}
+body section.signUpGroup div.modal form.modal-content div.container div#message p.invalid::before {
+  position: relative;
+  left: -30px;
+  content: "✖";
+}
+body section.signUpGroup div.modal form.modal-content div.container div.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body section.signUpGroup div.modal form.modal-content div.container div.clearfix button.cancelbtn {
+  border-radius: 30px;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  background-color: #f44336;
+  float: left;
+  width: 50%;
+}
+body section.signUpGroup div.modal form.modal-content div.container div.clearfix button.cancelbtn:hover {
+  opacity: 0.9;
+}
+body section.signUpGroup div.modal form.modal-content div.container div.clearfix button.signupbtn {
+  border-radius: 30px;
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  width: 50%;
+}
+body section.signUpGroup div.modal form.modal-content div.container div.clearfix button.signupbtn:hover {
+  opacity: 0.9;
+}
+body div.alertGroup {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+body div.alertGroup div.default {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+}
+body div.alertGroup div.default p.closebtn {
+  font-weight: bold;
+  background-color: rgba(125, 125, 125, 0.468);
+  font-size: 2rem;
+  padding-right: 2%;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 1px solid black;
+}
+body div.alertGroup div.default p.closebtn:hover {
+  color: black;
+}
+body div.alertGroup div.default p.alert-text {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+body div.alertGroup div.danger {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+}
+body div.alertGroup div.danger p.closebtn {
+  border-radius: 10px 10px 0px 0px;
+  font-weight: bold;
+  background-color: red;
+  font-size: 2rem;
+  padding-right: 2%;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 1px solid black;
+}
+body div.alertGroup div.danger p.closebtn:hover {
+  color: black;
+}
+body div.alertGroup div.danger p.alert-text {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+body div.alertGroup div.info {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+}
+body div.alertGroup div.info p.closebtn {
+  border-radius: 10px 10px 0px 0px;
+  font-weight: bold;
+  background-color: rgb(87, 185, 218);
+  font-size: 2rem;
+  padding-right: 2%;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 1px solid black;
+}
+body div.alertGroup div.info p.closebtn:hover {
+  color: black;
+}
+body div.alertGroup div.info p.alert-text {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+body div.alertGroup div.success {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+}
+body div.alertGroup div.success p.closebtn {
+  border-radius: 10px 10px 0px 0px;
+  font-weight: bold;
+  background-color: rgb(30, 230, 56);
+  font-size: 2rem;
+  padding-right: 2%;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 1px solid black;
+}
+body div.alertGroup div.success p.closebtn:hover {
+  color: black;
+}
+body div.alertGroup div.success p.alert-text {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+body main.frontPage section.slideshow-group {
+  max-height: 70vh;
+}
+body main.frontPage section.slideshow-group div.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+body main.frontPage section.slideshow-group div.slideshow-container div.mySlides {
+  display: none;
+}
+body main.frontPage section.slideshow-group div.slideshow-container div.mySlides div.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+body main.frontPage section.slideshow-group div.slideshow-container div.mySlides img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 70vh;
+  vertical-align: middle;
+}
+body main.frontPage section.slideshow-group div.slideshow-container div.mySlides div.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+body main.frontPage section.slideshow-group div.slideshow-container a.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body main.frontPage section.slideshow-group div.slideshow-container a.prev:hover {
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body main.frontPage section.slideshow-group div.slideshow-container a.prev i {
+  font-size: 2rem;
+}
+body main.frontPage section.slideshow-group div.slideshow-container a.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body main.frontPage section.slideshow-group div.slideshow-container a.next:hover {
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body main.frontPage section.slideshow-group div.slideshow-container a.next i {
+  font-size: 2rem;
+}
+body main.frontPage section.slideshow-group div.slideshow-container span.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+body main.frontPage section.slideshow-group div.slideshow-container span.dot:hover {
+  background-color: #717171;
+}
+body main.frontPage section.slideshow-group div.slideshow-container span.active {
+  background-color: #717171;
+}
+body main.frontPage section.collapsible-group button.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+body main.frontPage section.collapsible-group div.content {
+  display: block;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+body main.frontPage section.collapsible-group div.content div.collapsible-info p {
+  text-indent: 2em;
+}
+body main.frontPage section.collapsible-group button.active,
+body main.frontPage section.collapsible-group .collapsible:hover {
+  background-color: #555;
+}
+body main.product-page div.container-fluid div.row div.d-none div.tab {
+  background-color: rgba(125, 125, 125, 0.468);
+  height: 100%;
+}
+body main.product-page div.container-fluid div.row div.d-none div.tab button.tablinks {
+  display: block;
+  background-color: rgba(125, 125, 125, 0.468);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body main.product-page div.container-fluid div.row div.d-none div.tab button.tablinks:hover {
+  background-color: rgb(255, 255, 255);
+}
+body main.product-page div.container-fluid div.row div.d-none div.tab button.tablinks:active {
+  background-color: rgb(0, 0, 0);
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent {
+  animation: fadeOpacity 1s;
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box:hover {
+  box-shadow: 0 0 30px 0px rgb(0, 0, 0);
+  transform: scale(1.1);
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box form.product img.productImg {
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box form.product button.productShop {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  visibility: visible;
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box form.product button.productShop:hover {
+  transform: scale(1.2);
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box form.product button.productShop:active {
+  color: rgba(125, 125, 125, 0.468);
+}
+body main.product-page div.container-fluid div.row div.col-md-10 div.tabcontent div.row div.col-xl-3 div.box form.product button.productShop i {
+  padding-right: 5px;
+}
+body main.product-page div.main-side-for-madia-ctrl {
+  display: block;
+}
+body main.product-page div.main-side-for-madia-ctrl button.ctrl-main-side {
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+body main.product-page div.main-side-for-madia-ctrl button.ctrl-main-side:active {
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body main.product-page div.main-side-for-madia-ctrl button.ctrl-main-side i.ctrl-icon {
+  font-size: 1.25rem;
+}
+body div.main-side-for-madia {
+  display: none;
+}
+body div.main-side-for-madia div.tab {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60%;
+  background-color: rgba(125, 125, 125, 0.468);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+body div.main-side-for-madia div.tab button.cancle-main-side {
+  border: none;
+  background-color: none;
+  margin-bottom: 2rem;
+  text-align: start;
+  font-size: 1.25rem;
+}
+body div.main-side-for-madia div.tab button.cancle-main-side:active {
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body div.main-side-for-madia div.tab button.tablinks {
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+body div.main-side-for-madia div.tab button.tablinks:hover {
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body div.main-side-for-madia div.tab button.tablinks:active {
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent {
+  border-bottom: 1px solid rgba(125, 125, 125, 0.468);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div img.productImg {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div h2.productTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div.my-fS {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div.my-fS select.quantity:hover {
+  cursor: pointer;
+  background-color: rgba(125, 125, 125, 0.468);
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div i {
+  font-size: 1.25rem;
+  padding-right: 5px;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div span.productPrice {
+  font-size: 1.25rem;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div button.removeProduct {
+  background-color: red;
+  border-radius: 30px;
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div button.removeProduct:hover {
+  scale: 1.2;
+  background-color: rgb(255, 85, 85);
+}
+body main.shoppingCartPage div.container div.formBox form.setProduct div.productContent div div button.removeProduct:active {
+  scale: 0.8;
+  background-color: rgb(92, 18, 18);
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct {
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 1rem;
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div p.priceTotalBox {
+  margin: 0;
+  font-size: 2rem;
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div p.priceTotalBox span.priceTotal {
+  font-size: 2rem;
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div button.remove-all-product {
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 9px #999;
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div button.remove-all-product:hover {
+  background-color: rgb(255, 83, 83);
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div button.remove-all-product:active {
+  background-color: rgb(145, 5, 5);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div button.buy {
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 9px #999;
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div button.buy:hover {
+  background-color: rgb(1, 216, 1);
+}
+body main.shoppingCartPage div.container div.formBox div.total-contanct div button.buy:active {
+  background-color: rgb(21, 78, 21);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+body main.shoppingCartPage section.checkout-form-group {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 60px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container {
+  background-color: #f2f2f2;
+  padding: 2rem;
+  border: 1px solid lightgrey;
+  border-radius: 30px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form input[type=text]:hover {
+  border: 1px solid #13d3c9;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 {
+  flex: 50%;
+  padding: 0 16px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 label {
+  margin-bottom: 10px;
+  display: block;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 div.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 div.row1 div.col-50 {
+  flex: 50%;
+  padding: 0 16px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 div.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 div.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form div.row1 div.col-50 div.row1 div.col-50 {
+  flex: 50%;
+  padding: 0 16px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form label {
+  margin-bottom: 10px;
+  display: block;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form input.btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form input.btn:hover {
+  background-color: lightgreen;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form input.btn-cancel {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+}
+body main.shoppingCartPage section.checkout-form-group div.container form.checkout-form input.btn-cancel:hover {
+  background-color: rgb(233, 67, 67);
+}
+body footer {
+  background-color: rgb(0, 0, 0);
+}
+body footer div div div div.boxFt p {
+  color: rgb(255, 255, 255);
+  font-size: 0.75rem;
+}
+body footer div div div div.boxFt p a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+body footer div div div div.boxFt p a:hover {
+  color: rgba(125, 125, 125, 0.468);
+}
+body footer div div div div.boxFt p a i {
+  padding-right: 5px;
+}
+
+@keyframes fadeOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  div.row1 {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 537px) {
+  body header nav div.w-100 div ul.my-p-m-0 li.my-w {
+    width: 45%;
+  }
+}/*# sourceMappingURL=style.css.map */

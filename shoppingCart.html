@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="AZhang" />
+    <meta
+      name="description"
+      content="此網站是購物網站！注意！此網站為盧建璋的個人作品！請勿商用！"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <title>輝日購物網</title>
+    <link rel="icon" href="./imges/icon/cart-shopping-solid.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./styles/bs_v5.2/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="sticky-top myShadow">
+      <!-- Navbar -->
+      <nav>
+        <div class="w-100">
+          <div>
+            <ul
+              class="d-flex justify-content-md-center aling-items-md-center my-p-m-0"
+            >
+              <li class="d-md-none me-auto ms-2 text-center">
+                <a class="fs-3" href="#" id="Collapse"
+                  ><i class="bi bi-list"></i
+                ></a>
+              </li>
+              <li class="p-md-2 text-center my-w">
+                <a class="fs-xl-5 returnforindex" href="./index.html"
+                  ><h1 class="p-md-2 pt-3 my-fontSize">輝日購物網</h1></a
+                >
+              </li>
+              <li class="d-md-none ms-auto"></li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a
+                  id="a-login"
+                  class="fs-xl-5 dp"
+                  href="#"
+                  onclick="document.getElementById('id01').style.display='block'"
+                  ><i class="bi bi-box-arrow-in-right"></i>登入
+                </a>
+                <a id="a-login-out" class="fs-xl-5 ndp" href="#">
+                  <i class="bi bi-box-arrow-in-left"></i>登出</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a class="fs-xl-5 n-lock" href="#"
+                  ><i class="bi bi-telephone"></i>聯絡我們</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a class="fs-xl-5" href="./product.html"
+                  ><i class="bi bi-box-seam"></i>商品</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a
+                  class="fs-xl-5 dp shop-no-fill-icon"
+                  href="./shoppingCart.html"
+                  ><i class="bi bi-bag"></i>購物車</a
+                >
+                <a class="fs-xl-5 ndp shop-fill-icon" href="./shoppingCart.html"
+                  ><i class="bi bi-bag-fill"></i>購物車</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+      <!-- mobile side Navbar -->
+      <div id="sideNav" class="d-md-none">
+        <nav class="mt-5">
+          <ul class="d-flex flex-column">
+            <li class="ps-3 pt-3">
+              <a href="#" id="closeNav" class="fs-1 sideNevA p-1"
+                ><i class="bi bi-x-lg"></i
+              ></a>
+            </li>
+            <li class="ps-3">
+              <a
+                class="sideNevA fs-1 p-1 dp a-login"
+                href="#"
+                onclick="document.getElementById('id01').style.display='block'"
+                ><i class="bi bi-box-arrow-in-right"></i>登入</a
+              >
+              <a class="sideNevA fs-1 p-1 ndp a-login-out" href="#">
+                <i class="bi bi-box-arrow-in-left"></i>登出</a
+              >
+            </li>
+            <li class="ps-3">
+              <a class="sideNevA fs-1 p-1 n-lock" href="#"
+                ><i class="bi bi-telephone"></i>聯絡我們</a
+              >
+            </li>
+            <li class="ps-3">
+              <a class="sideNevA fs-1 p-1" href="./product.html"
+                ><i class="bi bi-box-seam"></i>商品</a
+              >
+            </li>
+            <li class="ps-3">
+              <a
+                class="sideNevA fs-1 p-1 dp shop-no-fill-icon"
+                href="./shoppingCart.html"
+                ><i class="bi bi-bag"></i>購物車</a
+              >
+              <a
+                class="sideNevA fs-1 p-1 ndp shop-fill-icon"
+                href="./shoppingCart.html"
+                ><i class="bi bi-bag-fill"></i>購物車</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile side Navbar -->
+    </header>
+    <!-- Login -->
+    <section class="login">
+      <div id="id01" class="modal">
+        <form class="modal-content">
+          <div class="imgcontainer">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="close closeJJ"
+              title="Close Modal"
+              >&times;</span
+            >
+          </div>
+          <div class="container p-4">
+            <label for="loginuname"><b>帳號:</b></label>
+            <input
+              id="login-account"
+              onfocus="this.value=''"
+              type="text"
+              placeholder="輸入帳號"
+              name="loginuname"
+              required
+            />
+
+            <label for="loginpsw"><b>密碼:</b></label>
+            <input
+              id="login-pwd"
+              onfocus="this.value=''"
+              type="password"
+              placeholder="輸入密碼"
+              name="loginpsw"
+              required
+            />
+            <p id="show-caps-lock-info">注意！Caps lock已啟用！</p>
+            <button id="login-btn" type="button">登入</button>
+            <label class="switch">
+              <input type="checkbox" class="login-chb-pwd" />
+              <span class="slider round"></span>
+            </label>
+            <span class="p">顯示密碼</span>
+
+            <a
+              class="m"
+              onclick="document.getElementById('signUp').style.display='block'"
+              >還未有帳號嗎？創建新帳號！</a
+            >
+          </div>
+          <div class="container">
+            <button
+              type="button"
+              onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn cancelbtnJJ"
+            >
+              取消
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Signup -->
+    <section class="signUpGroup">
+      <div id="signUp" class="modal">
+        <span
+          onclick="document.getElementById('signUp').style.display='none'"
+          class="close closeJS"
+          title="Close Modal"
+          >&times;</span
+        >
+        <form class="modal-content">
+          <div class="container p-5">
+            <h2>創建您的新帳號</h2>
+            <hr />
+            <label for="email"><b>帳號:</b></label>
+            <input
+              id="account-number"
+              onfocus="this.value=''"
+              type="text"
+              placeholder="輸入新帳號"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>密碼:</b></label>
+            <input
+              id="sinup-psw"
+              onfocus="this.value=''"
+              class="ipt-pwd-show all-password-input"
+              type="password"
+              placeholder="輸入新密碼"
+              name="psw"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="必須符合條件!"
+              required
+            />
+            <p class="show-caps-lock-inpassword">注意！Caps lock已啟用！</p>
+            <label for="psw-repeat"><b>再次確認密碼:</b></label>
+            <input
+              id="sinup-repeat-pwd"
+              onfocus="this.value=''"
+              class="ipt-pwd-show repeat-password-input"
+              type="password"
+              placeholder="輸入新密碼"
+              name="psw-repeat"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="必須符合條件!"
+              required
+            />
+            <p class="show-caps-lock-inrepassword">注意！Caps lock已啟用！</p>
+            <label class="switch">
+              <input
+                class="sinup-chb-pwd"
+                type="checkbox"
+                class="login-chb-pwd"
+              />
+              <span class="slider round"></span>
+            </label>
+            <span class="p">顯示密碼</span>
+            <!-- Password Validation -->
+            <div id="message">
+              <h3>警告!密碼必須包含以下內容：</h3>
+              <p id="letter" class="invalid">
+                需要一個以上的 <b>小寫</b> 英文!
+              </p>
+              <p id="capital" class="invalid">
+                需要一個以上的 <b>大寫</b> 英文!
+              </p>
+              <p id="number" class="invalid">需要一個以上的 <b>數字</b> !</p>
+              <p id="length" class="invalid">總共需要 <b>8個</b> 以上的密碼!</p>
+              <p id="repeat" class="invalid">
+                密碼需與再次確認密碼 <b>必須</b> 要相同!
+              </p>
+            </div>
+
+            <div class="clearfix">
+              <button
+                type="button"
+                onclick="document.getElementById('signUp').style.display='none'"
+                class="cancelbtn cancelbtnJs"
+              >
+                取消
+              </button>
+              <button id="required" type="button" class="signupbtn">
+                創立新帳號
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- alert -->
+    <div class="alertGroup">
+      <div style="display: none">
+        <p
+          class="closebtn"
+          onclick="this.parentElement.parentElement.style.display='none';"
+        >
+          &times;
+        </p>
+
+        <p class="alert-text">123</p>
+      </div>
+    </div>
+    <!--  -->
+    <main class="shoppingCartPage">
+      <!-- Checkout Form -->
+      <section class="checkout-form-group">
+        <div class="container">
+          <form class="checkout-form">
+            <div class="row1">
+              <div class="col-50">
+                <h3>請輸入運送地址:</h3>
+                <label for="fname"><i class="fa fa-user"></i>姓名:</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="王曉明"
+                  class="getInput"
+                />
+                <label for="email"
+                  ><i class="bi bi-envelope-at"></i> Email:</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Wang@example.com"
+                  class="getInput"
+                />
+                <label for="adr"><i class="bi bi-house-add"></i> 地址:</label>
+                <input
+                  type="text"
+                  id="adr"
+                  name="address"
+                  placeholder="黎明路二段658號"
+                  class="getInput"
+                />
+                <label for="city"
+                  ><i class="bi bi-building-add"></i> 城市:</label
+                >
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="台中市"
+                  class="getInput"
+                />
+
+                <div class="row1">
+                  <div class="col-50">
+                    <label for="state">區/鄉/鎮:</label>
+                    <input
+                      type="text"
+                      id="state"
+                      name="state"
+                      placeholder="南屯區"
+                      class="getInput"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">郵遞區號:</label>
+                    <input
+                      type="text"
+                      id="zip"
+                      name="zip"
+                      placeholder="408"
+                      class="getInput"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>請輸入卡號:</h3>
+                <label for="fname">接受的信用卡</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color: navy"></i>
+                  <i class="fa fa-cc-amex" style="color: blue"></i>
+                  <i class="fa fa-cc-mastercard" style="color: red"></i>
+                  <i class="fa fa-cc-discover" style="color: orange"></i>
+                  <i
+                    class="bi bi-credit-card"
+                    style="color: rgb(228, 7, 143)"
+                  ></i>
+                </div>
+                <label for="cname">信用卡上的名字:</label>
+                <input
+                  type="text"
+                  id="cname"
+                  name="cardname"
+                  placeholder="王曉明"
+                  class="getInput"
+                />
+                <label for="ccnum">信用卡卡號:</label>
+                <input
+                  type="text"
+                  id="ccnum"
+                  name="cardnumber"
+                  placeholder="1010-0101-1010-0101"
+                  class="getInput"
+                />
+                <label for="expmonth">到期月份:</label>
+                <input
+                  type="text"
+                  id="expmonth"
+                  name="expmonth"
+                  placeholder="06"
+                  class="getInput"
+                />
+                <div class="row1">
+                  <div class="col-50">
+                    <label for="expyear">到期年份:</label>
+                    <input
+                      type="text"
+                      id="expyear"
+                      name="expyear"
+                      placeholder="2024"
+                      class="getInput"
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="628" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr" />
+              送貨地址與帳單地址相同
+            </label>
+            <input type="button" value="結賬" class="btn checkout-btn" />
+            <input type="button" value="取消" class="btn-cancel cancel-btn" />
+          </form>
+        </div>
+      </section>
+      <!-- use shopping cart in the form contanct -->
+      <div class="container">
+        <div class="formBox mt-5 mb-5 ms-3 me-3 ms-sm-0 me-sm-0">
+          <form class="setProduct"></form>
+          <!-- total contanct -->
+          <div class="total-contanct row align-items-center sticky-bottom">
+            <div class="col-md-6 col-12">
+              <p class="priceTotalBox">
+                總金額:<i class="bi bi-currency-dollar"></i
+                ><span class="priceTotal"></span>
+              </p>
+            </div>
+            <div
+              class="col-md-4 col-sm-6 col-12 text-md-end text-sm-center mt-sm-0 mt-3"
+            >
+              <button type="button" class="remove-all-product">
+                移除全部商品
+              </button>
+            </div>
+            <div
+              class="col-md-2 col-sm-6 col-12 text-md-start text-sm-center text-end"
+            >
+              <button type="button" class="buy pay">付款</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid text-sm-start text-center">
+        <div class="row ms-sm-5 me-sm-5 ms-0 me-0 align-items-center">
+          <div class="col-sm-6 col-12">
+            <div class="boxFt mt-3 mb-3 ms-sm-5 ms-0">
+              <p class="mb-1">連絡資訊:</p>
+              <p class="mb-1">新竹市中山路640巷200號</p>
+              <p class="mb-1">Tel: (03) 5217891</p>
+              <p class="mb-1">Fax: (03) 5381508</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-12">
+            <div class="boxFt mt-sm-3 mt-0 mb-3 ms-sm-5 ms-0">
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-facebook"></i>臉書專頁</a>
+              </p>
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-line"></i>LINE官方帳號</a>
+              </p>
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-twitter"></i>推特專頁</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/universalJS .js"></script>
+    <script src="./js/shoppingCart.js"></script>
+  </body>
+</html>

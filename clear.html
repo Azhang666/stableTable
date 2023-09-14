@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="AZhang" />
+    <meta
+      name="description"
+      content="此網站是購物網站！注意！此網站為盧建璋的個人作品！請勿商用！"
+    />
+    <title>開發者使用</title>
+  </head>
+  <body>
+    <button id="clear" type="button" style="margin: 50px; font-size: 2rem">
+      注意!別按(給開發者使用的)
+    </button>
+    <script>
+      let claerStorageBtn = document.querySelector("#clear");
+      claerStorageBtn.addEventListener("click", () => {
+        let str = prompt("是否刪除?(y/n)");
+        if (str == "y") {
+          localStorage.clear();
+          alert("刪除成功");
+          location.reload();
+        } else if (str == "n") {
+          alert("取消刪除");
+          location.reload();
+        } else {
+          alert("87!請輸入y或n!刪除失敗!");
+          location.reload();
+        }
+      });
+    </script>
+  </body>
+</html>

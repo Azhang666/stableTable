@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="AZhang" />
+    <meta
+      name="description"
+      content="此網站是購物網站！注意！此網站為盧建璋的個人作品！請勿商用！"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <title>輝日購物網</title>
+    <link rel="icon" href="./imges/icon/cart-shopping-solid.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./styles/bs_v5.2/bootstrap.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="sticky-top myShadow">
+      <!-- Navbar -->
+      <nav>
+        <div class="w-100">
+          <div>
+            <ul
+              class="d-flex justify-content-md-center aling-items-md-center my-p-m-0"
+            >
+              <li class="d-md-none me-auto ms-2 text-center">
+                <a class="fs-3" href="#" id="Collapse"
+                  ><i class="bi bi-list"></i
+                ></a>
+              </li>
+              <li class="p-md-2 text-center my-w">
+                <a class="fs-xl-5 returnforindex" href="./index.html"
+                  ><h1 class="p-md-2 pt-3 my-fontSize">輝日購物網</h1></a
+                >
+              </li>
+              <li class="d-md-none ms-auto"></li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a
+                  id="a-login"
+                  class="fs-xl-5 dp"
+                  href="#"
+                  onclick="document.getElementById('id01').style.display='block'"
+                  ><i class="bi bi-box-arrow-in-right"></i>登入
+                </a>
+                <a id="a-login-out" class="fs-xl-5 ndp" href="#">
+                  <i class="bi bi-box-arrow-in-left"></i>登出</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a class="fs-xl-5 n-lock" href="#"
+                  ><i class="bi bi-telephone"></i>聯絡我們</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a class="fs-xl-5" href="#"
+                  ><i class="bi bi-box-seam"></i>商品</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a
+                  class="fs-xl-5 dp shop-no-fill-icon"
+                  href="./shoppingCart.html"
+                  ><i class="bi bi-bag"></i>購物車</a
+                >
+                <a class="fs-xl-5 ndp shop-fill-icon" href="./shoppingCart.html"
+                  ><i class="bi bi-bag-fill"></i>購物車</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- mobile side Navbar -->
+      <div id="sideNav" class="d-md-none">
+        <nav class="mt-5">
+          <ul class="d-flex flex-column">
+            <li class="ps-3 pt-3">
+              <a href="#" id="closeNav" class="fs-1 sideNevA p-1"
+                ><i class="bi bi-x-lg"></i
+              ></a>
+            </li>
+            <li class="ps-3">
+              <a
+                class="sideNevA fs-1 p-1 dp a-login"
+                href="#"
+                onclick="document.getElementById('id01').style.display='block'"
+                ><i class="bi bi-box-arrow-in-right"></i>登入</a
+              >
+              <a class="sideNevA fs-1 p-1 ndp a-login-out" href="#">
+                <i class="bi bi-box-arrow-in-left"></i>登出</a
+              >
+            </li>
+            <li class="ps-3">
+              <a class="sideNevA fs-1 p-1 n-lock" href="#"
+                ><i class="bi bi-telephone"></i>聯絡我們</a
+              >
+            </li>
+            <li class="ps-3">
+              <a class="sideNevA fs-1 p-1" href="./product.html"
+                ><i class="bi bi-box-seam"></i>商品</a
+              >
+            </li>
+            <li class="ps-3">
+              <a
+                class="sideNevA fs-1 p-1 dp shop-no-fill-icon"
+                href="./shoppingCart.html"
+                ><i class="bi bi-bag"></i>購物車</a
+              >
+              <a
+                class="sideNevA fs-1 p-1 ndp shop-fill-icon"
+                href="./shoppingCart.html"
+                ><i class="bi bi-bag-fill"></i>購物車</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Login -->
+    <section class="login">
+      <div id="id01" class="modal">
+        <form class="modal-content">
+          <div class="imgcontainer">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="close closeJJ"
+              title="Close Modal"
+              >&times;</span
+            >
+          </div>
+          <div class="container p-4">
+            <label for="loginuname"><b>帳號:</b></label>
+            <input
+              id="login-account"
+              onfocus="this.value=''"
+              type="text"
+              placeholder="輸入帳號"
+              name="loginuname"
+              required
+            />
+
+            <label for="loginpsw"><b>密碼:</b></label>
+            <input
+              id="login-pwd"
+              onfocus="this.value=''"
+              type="password"
+              placeholder="輸入密碼"
+              name="loginpsw"
+              required
+            />
+            <p id="show-caps-lock-info">注意！Caps lock已啟用！</p>
+            <button id="login-btn" type="button">登入</button>
+            <label class="switch">
+              <input type="checkbox" class="login-chb-pwd" />
+              <span class="slider round"></span>
+            </label>
+            <span class="p">顯示密碼</span>
+
+            <a
+              class="m"
+              onclick="document.getElementById('signUp').style.display='block'"
+              >還未有帳號嗎？創建新帳號！</a
+            >
+          </div>
+          <div class="container">
+            <button
+              type="button"
+              onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn cancelbtnJJ"
+            >
+              取消
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Signup -->
+    <section class="signUpGroup">
+      <div id="signUp" class="modal">
+        <span
+          onclick="document.getElementById('signUp').style.display='none'"
+          class="close closeJS"
+          title="Close Modal"
+          >&times;</span
+        >
+        <form class="modal-content">
+          <div class="container p-5">
+            <h2>創建您的新帳號</h2>
+            <hr />
+            <label for="email"><b>帳號:</b></label>
+            <input
+              id="account-number"
+              onfocus="this.value=''"
+              type="text"
+              placeholder="輸入新帳號"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>密碼:</b></label>
+            <input
+              id="sinup-psw"
+              onfocus="this.value=''"
+              class="ipt-pwd-show all-password-input"
+              type="password"
+              placeholder="輸入新密碼"
+              name="psw"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="必須符合條件!"
+              required
+            />
+            <p class="show-caps-lock-inpassword">注意！Caps lock已啟用！</p>
+            <label for="psw-repeat"><b>再次確認密碼:</b></label>
+            <input
+              id="sinup-repeat-pwd"
+              onfocus="this.value=''"
+              class="ipt-pwd-show repeat-password-input"
+              type="password"
+              placeholder="輸入新密碼"
+              name="psw-repeat"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="必須符合條件!"
+              required
+            />
+            <p class="show-caps-lock-inrepassword">注意！Caps lock已啟用！</p>
+            <label class="switch">
+              <input
+                class="sinup-chb-pwd"
+                type="checkbox"
+                class="login-chb-pwd"
+              />
+              <span class="slider round"></span>
+            </label>
+            <span class="p">顯示密碼</span>
+            <!-- Password Validation -->
+            <div id="message">
+              <h3>警告!密碼必須包含以下內容：</h3>
+              <p id="letter" class="invalid">
+                需要一個以上的 <b>小寫</b> 英文!
+              </p>
+              <p id="capital" class="invalid">
+                需要一個以上的 <b>大寫</b> 英文!
+              </p>
+              <p id="number" class="invalid">需要一個以上的 <b>數字</b> !</p>
+              <p id="length" class="invalid">總共需要 <b>8個</b> 以上的密碼!</p>
+              <p id="repeat" class="invalid">
+                密碼需與再次確認密碼 <b>必須</b> 要相同!
+              </p>
+            </div>
+
+            <div class="clearfix">
+              <button
+                type="button"
+                onclick="document.getElementById('signUp').style.display='none'"
+                class="cancelbtn cancelbtnJs"
+              >
+                取消
+              </button>
+              <button id="required" type="button" class="signupbtn">
+                創立新帳號
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- alert -->
+    <div class="alertGroup">
+      <div style="display: none">
+        <p
+          class="closebtn"
+          onclick="this.parentElement.parentElement.style.display='none';"
+        >
+          &times;
+        </p>
+
+        <p class="alert-text">123</p>
+      </div>
+    </div>
+    <!--main side for madia-->
+    <div class="sticky-top main-side-for-madia">
+      <div class="tab">
+        <button type="button" class="cancle-main-side">
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <button
+          class="tablinks fs-xl-5 text-truncate"
+          onclick="openProduct(event, 'tableHU') "
+          id="defaultOpen"
+        >
+          辦公桌
+        </button>
+        <button
+          class="tablinks fs-xl-5 text-truncate"
+          onclick="openProduct(event, 'chair')"
+        >
+          辦公椅
+        </button>
+        <button
+          class="tablinks fs-xl-5 text-truncate"
+          onclick="openProduct(event, 'cabinet')"
+        >
+          桌邊櫃
+        </button>
+      </div>
+    </div>
+    <!--  -->
+    <main class="product-page">
+      <!-- mainSideNavBtn -->
+      <div class="main-side-for-madia-ctrl d-md-none d-block text-start me-2">
+        <button type="button" class="ctrl-main-side">
+          <i class="ctrl-icon bi bi-arrow-right"></i>
+        </button>
+      </div>
+      <!-- products main -->
+      <div class="container-fluid text-center">
+        <div class="row ms-xl-5 me-xl-5 ms-1 me-1">
+          <div class="col-md-2 col-0 pe-xl-4 d-md-block d-none">
+            <div class="tab">
+              <p class="pt-5"></p>
+              <button
+                class="tablinks fs-xl-5 text-truncate"
+                onclick="openProduct(event, 'tableHU') "
+                id="defaultOpen"
+              >
+                辦公桌
+              </button>
+              <button
+                class="tablinks fs-xl-5 text-truncate"
+                onclick="openProduct(event, 'chair')"
+              >
+                辦公椅
+              </button>
+              <button
+                class="tablinks fs-xl-5 text-truncate"
+                onclick="openProduct(event, 'cabinet')"
+              >
+                桌邊櫃
+              </button>
+            </div>
+          </div>
+          <!-- mainNav content -->
+          <div class="col-md-10 col-12 mt-md-5 mb-md-5 mt-1 mb-1">
+            <div id="tableHU" class="tabcontent">
+              <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-70.png"
+                        alt="hu-70.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-70辦公桌(70公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-70辦公桌是HU桌最小的尺寸，適用於場地不大的地方，建議桌下安裝薄抽方便放文具。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1638</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-100.png"
+                        alt="hu-100.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-100辦公桌(100公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-100辦公桌長100公分，適合較小空間，放活動櫃後腳下空間較小，建議桌下加裝薄抽增加貯放空間，本桌價格含安裝。桌下若要放置活動櫃，建議用較小規格，才有桌下空間。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1764</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-120.png"
+                        alt="hu-100.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-120辦公桌(120公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-120辦公桌(120公分)，是HU辦公桌系列中銷量最多的桌子，因為它的尺寸大小剛好適合辦公人員使用，底下放罝活動櫃後的空間恰當，適合辦公室空間不大，人員多的環境。深度可減為60公分，增加辦公室空間。本桌不適合加側桌，因空間不夠。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1890</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-140.png"
+                        alt="hu-140.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-140辦公桌(140公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-140辦公桌是暢銷的辦公桌，因為它的大小可以加側桌，增加工作空間，辦公桌面積加大，同樣的深度也可減少為60公分增加辦公室空間利用。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2016</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-120A.png"
+                        alt="hu-120A.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-120A 辦公桌組(120公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        這是網路熱銷的120公分整組HU辦公桌特價中！！ HU-120A
+                        辦公桌組，120公分整組HU辦公桌(含0.5活動櫃，ABS薄抽)，經濟實惠組合，配備齊全，長度剛好，最適合各種辦公室使用。
+                        顏色有其他選擇，木紋桌面，黑色桌腳本体，黑色活動櫃，請按右上選項，不清楚問我們。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">3302</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-140A.png"
+                        alt="hu-140A.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-140A 辦公桌組(140公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-140辦公桌是暢銷的辦公桌，因為它的大小可以加側桌，增加工作空間，辦公桌面積加大，同樣的深度也可減少為60公分增加辦公室空間利用。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">3425</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-140C.png"
+                        alt="hu-140C.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-140C L型辦公桌組(140公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-140C
+                        辦公桌組，140公分桌(需配矮活動櫃)(含0.5活動櫃，ABS薄抽，側桌)
+                        經濟實惠組合，因為加了側桌，比120公分桌有更大的辦公桌空間，適合工作量大的人使用
+                        由於140公分只能裝ABS薄抽，若要鍵盤架，則活動櫃要採用矮活動櫃，才安裝得下
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">5396</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-150C.png"
+                        alt="hu-150C.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-150C L型辦公桌組(150公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        HU-150C 150公分(需配矮活動櫃)(含0.5活動櫃，ABS薄抽)
+                        經濟實惠組合，更大的辦公桌空間，適合工作量大的人使用。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">5520</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-140D.png"
+                        alt="hu-140D.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-140D L型辦公桌組(140公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        適合主管使用，下黑上灰或和木紋的辦公桌組+側桌
+                        140公分(需配矮活動櫃)(含0.5活動櫃，ABS薄抽)
+                        經濟實惠組合，更大的辦公桌空間
+                        由於140公分只能裝ABS薄抽，若要鍵盤架，則活動櫃要採用矮活動櫃，才安裝得下
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">5827</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-150D.png"
+                        alt="hu-150D.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-150D L型辦公桌組(150公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        適合主管使用，下黑上灰或和木紋的辦公桌組+側桌
+                        150公分(含黑體活動櫃，ABS薄抽)
+                        經濟實惠組合，更大的辦公桌空間
+                      </p>
+                      <div
+                        type="button"
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">5950</span>元
+                      </div>
+                      <button
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-150B.png"
+                        alt="hu-150B.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-150B 辦公桌組(150公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        本系列桌子採菜單式選購，其他規格及不同配備，請點選選項即可，有不同價格
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">4694</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/table/HU/hu-160B.png"
+                        alt="hu-160B.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        HU-160B 辦公桌組(160公分)
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        本系列桌子採菜單式選購，其他規格及不同配備，請點選選項即可，有不同價格
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">4817</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="chair" class="tabcontent">
+              <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-01.png"
+                        alt="chair-01.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        卡羅電腦辦公椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        CR03STG 卡羅電腦辦公椅，布面或皮面二款物料做選擇 /
+                        椅款造型簡單、活潑，使用高密度PU發泡成形薄泡棉加上壓克力布，質感好舒適度夠，並加裝半圓形護邊條，有防撞擊效果佳不會手滑後常期推撞牆而摩擦而壞。此張椅子背部為s型，可讓您腰部靠著覺得有東西幫您支撐住並坐久也不會覺得累。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1915</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-02.png"
+                        alt="chair-02.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        席特辦公椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        CT03KG 席特低背辦公椅 產品尺寸：W51D60H91-99
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2052</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-03.png"
+                        alt="chair-03.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        賽揚中背無扶手網椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        簡潔。經濟 +附贈活動式腰墊
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2191</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-04.png"
+                        alt="chair-04.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        邁克爾辦公椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        優雅舒適的JS-A471TG-BT邁克爾辦公椅，尺寸:
+                        W680xD710xH1160
+                        (mm)由暉日辦公家具專為提升您的工作體驗而設計。這款辦公椅採用高級網布，透氣性優越，並提供多種色彩選擇以迎合客戶需求。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2591</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-05.png"
+                        alt="chair-05.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        凱德扶手網椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        KD02STG 凱德扶手網椅，實惠。有型。透氣。舒適。品味
+                        外形尺寸：W64 D56 H91-101 人因尺寸：W48 D44 H42-52
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">3155</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-06.png"
+                        alt="chair-06.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        澳莉網椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        蔚藍海岸與白色沙灘 乘坐OL澳莉主管網椅
+                        譔您不用出國也能感受地中海風情 時尚舒適一步到位
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2328</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-07.png"
+                        alt="chair-07.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        樂活扶手塑鋼網椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        產品說明 1.布料：色號TW-11 2.背框：PP塑鋼射出成形
+                        3.坐墊：高密度PU發泡成形 4.扶手：可向上收合PP手
+                        5.機構：中置式後仰機構 6.升降：氣壓棒升降裝置，行程8公分
+                        7.椅腳：尼龍加纖高叉腳，半徑32公分
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1970</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/chair/chair-08.png"
+                        alt="chair-08.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        人體工學椅
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        人體工學椅(午休可躺辦公椅)，160大角度後躺，3秒可變床，寬大頭枕好安睡。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">4864</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cabinet" class="tabcontent">
+              <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-01.png"
+                        alt="cabinet-01.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        CC型活動矮櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        本網站熱銷商品，CP值最高，體積小，容量大，適合辦公零碎物品存放
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1100</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-02.png"
+                        alt="cabinet-02.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        時尚圓弧活動櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        大MINI 時尚圓弧活動櫃，造型美觀，規格
+                        W39*D48*H59cm，比一般活動矮櫃
+                        (W40*D57*H58cm)小，適合較窄位置桌子，有更大的伸展空間。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2993</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-03.png"
+                        alt="cabinet-03.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        新式弧型活動櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        堅固的塑膠滑輪：採用移動滑輪，堅固耐用，讓您的活動櫃移動輕鬆方便。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1929</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-04.png"
+                        alt="cabinet-04.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        頂面木紋矮活動櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        頂面木紋矮活動櫃,內附筆盒，插板，
+                        附鑰匙2支,主體灰色，頂面木紋色。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1686</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-05.png"
+                        alt="cabinet-05.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        木紋高活動櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        木紋高活動櫃，本網站熱銷商品，CP值最高，粉體烤漆，鋼板厚度
+                        0.6mm，前兩輪採煞車式的滾輪設計，可固定不滑動，附設第五輪，方便抽屜收拉更加穩固，保証台灣製造。
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1710</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-06.png"
+                        alt="cabinet-06.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        P型活動櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        配合屏風顏色，P型活動櫃有銀、深灰砂、灰、白、黑五色，讓您的辦公室更出色!
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">1995</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-07.png"
+                        alt="cabinet-07.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        特級活動高櫃
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        本網站熱銷活動高櫃，超堅固
+                        ,淺灰色粉體烤漆，鋼板厚度0.8mm
+                        ,前兩輪採煞車式的滾輪設計，固定不滑動
+                        ,附設第五輪，方便抽屜收拉，更加穩固
+                        ,台灣欣美ISO工廠製造，品質優良
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2160</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                  <div class="box ms-xl-0 me-xl-0 mb-xl-0 m-md-1 m-4">
+                    <form class="product">
+                      <img
+                        class="productImg w-100 p-lg-5 p-md-3 p-5"
+                        src="./imges/commodity/cabinet/cabinet-08.png"
+                        alt="cabinet-08.png"
+                      />
+                      <p class="productTitle ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1">
+                        鈑金文件車
+                      </p>
+                      <p
+                        class="productInfo ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1 text-truncate"
+                      >
+                        鈑金文件車 櫃體:鍍鋅鋼板防鏽粉體烤漆,
+                        底座:鍍鋅鋼板防鏽粉體烤漆
+                      </p>
+                      <div
+                        class="productPrice ps-xl-5 pe-xl-5 pb-xl-3 ps-1 pe-1"
+                      >
+                        <i class="bi bi-currency-dollar"></i>
+                        <span class="productPriceValue">2790</span>元
+                      </div>
+                      <button
+                        type="button"
+                        class="productShop ms-xl-5 me-xl-5 mb-xl-3 ps-1 pe-1 mb-2"
+                      >
+                        <i class="bi bi-cart-plus-fill"></i>加入購物車
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-fluid text-sm-start text-center">
+        <div class="row ms-sm-5 me-sm-5 ms-0 me-0 align-items-center">
+          <div class="col-sm-6 col-12">
+            <div class="boxFt mt-3 mb-3 ms-sm-5 ms-0">
+              <p class="mb-1">連絡資訊:</p>
+              <p class="mb-1">新竹市中山路640巷200號</p>
+              <p class="mb-1">Tel: (03) 5217891</p>
+              <p class="mb-1">Fax: (03) 5381508</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-12">
+            <div class="boxFt mt-sm-3 mt-0 mb-3 ms-sm-5 ms-0">
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-facebook"></i>臉書專頁</a>
+              </p>
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-line"></i>LINE官方帳號</a>
+              </p>
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-twitter"></i>推特專頁</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/universalJS .js"></script>
+    <script src="./js/productJS.js"></script>
+  </body>
+</html>

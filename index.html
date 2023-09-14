@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="AZhang" />
+    <meta
+      name="description"
+      content="此網站是購物網站！注意！此網站為盧建璋的個人作品！請勿商用！"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <title>輝日購物網</title>
+    <link rel="icon" href="./imges/icon/cart-shopping-solid.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./styles/bs_v5.2/bootstrap.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="sticky-top myShadow">
+      <!-- Navbar -->
+      <nav>
+        <div class="w-100">
+          <div>
+            <ul
+              class="d-flex justify-content-md-center aling-items-md-center my-p-m-0"
+            >
+              <li class="d-md-none me-auto ms-2 text-center">
+                <a class="fs-3" href="#" id="Collapse"
+                  ><i class="bi bi-list"></i
+                ></a>
+              </li>
+              <li class="p-md-2 text-center my-w">
+                <a class="fs-xl-5" href="#"
+                  ><h1 class="p-md-2 pt-3 my-fontSize">輝日購物網</h1></a
+                >
+              </li>
+              <li class="d-md-none ms-auto"></li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a
+                  id="a-login"
+                  class="fs-xl-5 dp"
+                  href="#"
+                  onclick="document.getElementById('id01').style.display='block'"
+                  ><i class="bi bi-box-arrow-in-right"></i>登入
+                </a>
+                <a id="a-login-out" class="fs-xl-5 ndp" href="#">
+                  <i class="bi bi-box-arrow-in-left"></i>登出</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a class="fs-xl-5 n-lock" href="#"
+                  ><i class="bi bi-telephone"></i>聯絡我們</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a class="fs-xl-5" href="./product.html"
+                  ><i class="bi bi-box-seam"></i>商品</a
+                >
+              </li>
+              <li class="d-md-block d-none m-0 p-2 text-center">
+                <a
+                  class="fs-xl-5 dp shop-no-fill-icon"
+                  href="./shoppingCart.html"
+                  ><i class="bi bi-bag"></i>購物車</a
+                >
+                <a class="fs-xl-5 ndp shop-fill-icon" href="./shoppingCart.html"
+                  ><i class="bi bi-bag-fill"></i>購物車</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+      <!-- mobile side Navbar -->
+      <div id="sideNav" class="d-md-none">
+        <nav class="mt-5">
+          <ul class="d-flex flex-column">
+            <li class="ps-3 pt-3">
+              <a href="#" id="closeNav" class="fs-1 sideNevA p-1"
+                ><i class="bi bi-x-lg"></i
+              ></a>
+            </li>
+            <li class="ps-3">
+              <a
+                class="sideNevA fs-1 p-1 dp a-login"
+                href="#"
+                onclick="document.getElementById('id01').style.display='block'"
+                ><i class="bi bi-box-arrow-in-right"></i>登入</a
+              >
+              <a class="sideNevA fs-1 p-1 fs-xl-5 ndp a-login-out" href="#">
+                <i class="bi bi-box-arrow-in-left"></i>登出</a
+              >
+            </li>
+            <li class="ps-3">
+              <a class="sideNevA fs-1 p-1 n-lock" href="#"
+                ><i class="bi bi-telephone"></i>聯絡我們</a
+              >
+            </li>
+            <li class="ps-3">
+              <a class="sideNevA fs-1 p-1" href="./product.html"
+                ><i class="bi bi-box-seam"></i>商品</a
+              >
+            </li>
+            <li class="ps-3">
+              <a
+                class="sideNevA fs-1 p-1 dp shop-no-fill-icon"
+                href="./shoppingCart.html"
+                ><i class="bi bi-bag"></i>購物車</a
+              >
+              <a
+                class="sideNevA fs-1 p-1 ndp shop-fill-icon"
+                href="./shoppingCart.html"
+                ><i class="bi bi-bag-fill"></i>購物車</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile side Navbar -->
+    </header>
+    <!-- Login -->
+    <section class="login">
+      <div id="id01" class="modal">
+        <form class="modal-content">
+          <div class="imgcontainer">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="close closeJJ"
+              title="Close Modal"
+              >&times;</span
+            >
+          </div>
+          <div class="container p-4">
+            <label for="loginuname"><b>帳號:</b></label>
+            <input
+              id="login-account"
+              onfocus="this.value=''"
+              type="text"
+              placeholder="輸入帳號"
+              name="loginuname"
+              required
+            />
+
+            <label for="loginpsw"><b>密碼:</b></label>
+            <input
+              id="login-pwd"
+              onfocus="this.value=''"
+              type="password"
+              placeholder="輸入密碼"
+              name="loginpsw"
+              required
+            />
+            <p id="show-caps-lock-info">注意！Caps lock已啟用！</p>
+            <button id="login-btn" type="button">登入</button>
+            <label class="switch">
+              <input type="checkbox" class="login-chb-pwd" />
+              <span class="slider round"></span>
+            </label>
+            <span class="p">顯示密碼</span>
+
+            <a
+              class="m"
+              onclick="document.getElementById('signUp').style.display='block'"
+              >還未有帳號嗎？創建新帳號！</a
+            >
+          </div>
+          <div class="container">
+            <button
+              type="button"
+              onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn cancelbtnJJ"
+            >
+              取消
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Signup -->
+    <section class="signUpGroup">
+      <div id="signUp" class="modal">
+        <span
+          onclick="document.getElementById('signUp').style.display='none'"
+          class="close closeJS"
+          title="Close Modal"
+          >&times;</span
+        >
+        <form class="modal-content">
+          <div class="container p-5">
+            <h2>創建您的新帳號</h2>
+            <hr />
+            <label for="email"><b>帳號:</b></label>
+            <input
+              id="account-number"
+              onfocus="this.value=''"
+              type="text"
+              placeholder="輸入新帳號"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>密碼:</b></label>
+            <input
+              id="sinup-psw"
+              onfocus="this.value=''"
+              class="ipt-pwd-show all-password-input"
+              type="password"
+              placeholder="輸入新密碼"
+              name="psw"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="必須符合條件!"
+              required
+            />
+            <p class="show-caps-lock-inpassword">注意！Caps lock已啟用！</p>
+            <label for="psw-repeat"><b>再次確認密碼:</b></label>
+            <input
+              id="sinup-repeat-pwd"
+              onfocus="this.value=''"
+              class="ipt-pwd-show repeat-password-input"
+              type="password"
+              placeholder="輸入新密碼"
+              name="psw-repeat"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="必須符合條件!"
+              required
+            />
+            <p class="show-caps-lock-inrepassword">注意！Caps lock已啟用！</p>
+            <label class="switch">
+              <input
+                class="sinup-chb-pwd"
+                type="checkbox"
+                class="login-chb-pwd"
+              />
+              <span class="slider round"></span>
+            </label>
+            <span class="p">顯示密碼</span>
+            <!-- Password Validation -->
+            <div id="message">
+              <h3>警告!密碼必須包含以下內容：</h3>
+              <p id="letter" class="invalid">
+                需要一個以上的 <b>小寫</b> 英文!
+              </p>
+              <p id="capital" class="invalid">
+                需要一個以上的 <b>大寫</b> 英文!
+              </p>
+              <p id="number" class="invalid">需要一個以上的 <b>數字</b> !</p>
+              <p id="length" class="invalid">總共需要 <b>8個</b> 以上的密碼!</p>
+              <p id="repeat" class="invalid">
+                密碼需與再次確認密碼 <b>必須</b> 要相同!
+              </p>
+            </div>
+
+            <div class="clearfix">
+              <button
+                type="button"
+                onclick="document.getElementById('signUp').style.display='none'"
+                class="cancelbtn cancelbtnJs"
+              >
+                取消
+              </button>
+              <button id="required" type="button" class="signupbtn">
+                創立新帳號
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- alert -->
+    <div class="alertGroup">
+      <div style="display: none">
+        <p
+          class="closebtn"
+          onclick="this.parentElement.parentElement.style.display='none';"
+        >
+          &times;
+        </p>
+
+        <p class="alert-text">123</p>
+      </div>
+    </div>
+    <!--  -->
+    <main class="frontPage">
+      <!-- slideShow -->
+      <section class="slideshow-group">
+        <div class="slideshow-container">
+          <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="./imges/slideShowImg/slideShow01.png" />
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="./imges/slideShowImg/slideShow02.png" />
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext"></div>
+            <img src="./imges/slideShowImg/slideShow03.png" />
+            <div class="text"></div>
+          </div>
+          <a class="prev"><i class="bi bi-arrow-bar-left"></i></a>
+          <a class="next"><i class="bi bi-arrow-bar-right"></i></a>
+          <!-- <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span> -->
+        </div>
+      </section>
+
+      <!-- Collapsible -->
+      <section class="collapsible-group">
+        <button type="button" class="collapsible ps-5 pe-5 fs-5">公告</button>
+        <div class="content p-5">
+          <div class="collapsible-info">
+            <p>
+              感謝您選擇暉日辦公家具作為您的採購夥伴！我們提供高品質的辦公家具，並擁有24年的信譽和口碑。無論您需要哪種辦公家具，我們的詳細分類目錄和價格將為您提供最佳的選擇。本網站隨時更新資料，以確保您獲得最新的產品資訊。作為OA辦公家具的最佳參考網站，我們致力於為您的員工提供舒適和便利。
+              不論北部、中部或南部，我們的發貨中心都能迅速配送您所需的辦公家具。對於大部分六都及新竹以北的地區，我們提供免運費的送貨服務。您可以放心選購，因為我們的價格比其他平台和原廠更經濟實惠。
+              我們提供完善的商品保固和售後服務，以確保您的購物滿意度。客服人員禮貌親切且具有豐富的經驗，可快速為您設計並提供報價單，協助解決任何辦公家具問題。不論是新設、增添還是遷移辦公家具工程，我們都樂意為您提供支援。
+              如果您有任何問題或需求，請隨時聯繫我們。請來電03-5217891，或郵件至service@hz.com.tw，或在Line上添加我們的ID：@hzoa
+              訂購可用下列任一方式:(本網站的價格皆為未稅價)
+            </p>
+            <ol>
+              <li>
+                電話訂購:免費電話0800-898955
+                或03-5217891，信箱:service@hz.com.tw，或聯絡我們
+              </li>
+              <li>網路訂購:登入您的帳號! 或者您第一次來訪，請新建一個帳號。</li>
+              <li>
+                Line訂購:請找ID:@hzoa (暉日辦公家具) 加入暉日OA辦公家具好友
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container-fluid text-sm-start text-center">
+        <div class="row ms-sm-5 me-sm-5 ms-0 me-0 align-items-center">
+          <div class="col-sm-6 col-12">
+            <div class="boxFt mt-3 mb-3 ms-sm-5 ms-0">
+              <p class="mb-1">連絡資訊:</p>
+              <p class="mb-1">新竹市中山路640巷200號</p>
+              <p class="mb-1">Tel: (03) 5217891</p>
+              <p class="mb-1">Fax: (03) 5381508</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-12">
+            <div class="boxFt mt-sm-3 mt-0 mb-3 ms-sm-5 ms-0">
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-facebook"></i>臉書專頁</a>
+              </p>
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-line"></i>LINE官方帳號</a>
+              </p>
+              <p class="mb-1">
+                <a href="#"><i class="bi bi-twitter"></i>推特專頁</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/universalJS .js"></script>
+    <script src="./js/fontPageJS .js"></script>
+  </body>
+</html>
